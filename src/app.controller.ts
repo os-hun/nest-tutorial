@@ -18,8 +18,6 @@ export class AppController {
 
   @Get('/query_test')
   getQuery(@Req() req: Request): string {
-    return (
-      'This action is testing query: ' + JSON.stringify(req.query, null, '\t')
-    );
+    return 'This action is testing query: ' + req.query.test;
   }
 }
